@@ -1,41 +1,81 @@
-// Active nav link by current file name
-(function(){
-  const file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll('[data-nav]').forEach(a=>{
-    if(a.getAttribute("href").toLowerCase() === file) a.classList.add("active");
-  });
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRDLUCK — Shop</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">
+          <div class="badge">🔱</div>
+          <div>CRDLUCK<small>Luxury is Rare</small></div>
+        </a>
 
-  const y = document.getElementById("year");
-  if(y) y.textContent = new Date().getFullYear();
-})();
+        <nav class="links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="shop.html">Shop</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="drop.html">Drop</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
 
-function toast(msg){
-  const el = document.getElementById("toast");
-  if(!el) return;
-  el.textContent = msg;
-  el.style.display = "block";
-  setTimeout(()=> el.style.display="none", 2600);
-}
+        <a class="btn btn-gold" href="drop.html">Join Drop</a>
+      </div>
+    </div>
+  </header>
 
-// Demo signup handler (Drop / Newsletter)
-function handleSignup(e){
-  e.preventDefault();
-  const email = e.target.querySelector("input[type='email']")?.value?.trim();
-  if(!email) return false;
+  <main class="section">
+    <div class="container">
+      <h1 style="font-size:40px;">Shop</h1>
+      <p>Hier kommen deine Produkte rein.</p>
 
-  console.log("SIGNUP:", email);
-  toast("✅ Du bist auf der Reserve List.");
+      <div class="grid" style="margin-top:18px;">
+        <div class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <div class="kicker">LIMITED DROP</div>
+            <h3>CRDLUCK Hoodie</h3>
+            <p class="muted">Heavyweight • Clean Branding • Elite Fit</p>
+            <div class="row-between">
+              <span class="price">€129</span>
+              <a class="btn btn-outline" href="drop.html">Reserve</a>
+            </div>
+          </div>
+        </div>
 
-  e.target.reset();
-  return false;
-}
+        <div class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <div class="kicker">SIGNATURE</div>
+            <h3>CRDLUCK Tee</h3>
+            <p class="muted">Premium Cotton • Minimal Logo • Timeless</p>
+            <div class="row-between">
+              <span class="price">€69</span>
+              <a class="btn btn-outline" href="drop.html">Reserve</a>
+            </div>
+          </div>
+        </div>
 
-// Demo contact handler
-function handleContact(e){
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(e.target).entries());
-  console.log("CONTACT:", data);
-  toast("✅ Nachricht gesendet (Demo).");
-  e.target.reset();
-  return false;
-}
+        <div class="card">
+          <div class="thumb"></div>
+          <div class="card-body">
+            <div class="kicker">ACCESSORY</div>
+            <h3>CRDLUCK Cap</h3>
+            <p class="muted">Structured • Crown Detail • Rare Piece</p>
+            <div class="row-between">
+              <span class="price">€49</span>
+              <a class="btn btn-outline" href="drop.html">Reserve</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
