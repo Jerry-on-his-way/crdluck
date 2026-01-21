@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRDLUCK — Drop 001</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><div class="badge">🔱</div><div>CRDLUCK<small>Luxury is Rare</small></div></a>
+        <nav class="links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="shop.html">Shop</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="drop.html">Drop</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-gold" href="shop.html">Shop</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="kicker"><span class="dot"></span>DROP 001 • RESERVED ACCESS</div>
+      <h1 style="font-size:44px; margin:16px 0 10px;">Join the Reserve List</h1>
+      <p>Drop-Access zuerst für Insider. Kein Spam. Nur der Moment, wenn er kommt.</p>
+
+      <div class="grid-2">
+        <div class="panel" style="padding:18px;">
+          <h2>Early Access</h2>
+          <p>Trag dich ein – du bekommst den Drop-Link vor allen anderen.</p>
+
+          <form onsubmit="return handleSignup(event)" style="margin-top:14px;">
+            <div class="row">
+              <input type="email" required placeholder="E-Mail" />
+              <button class="btn btn-gold" type="submit">Eintragen</button>
+            </div>
+          </form>
+
+          <p style="margin-top:10px; font-size:12px;">Abmeldung jederzeit möglich.</p>
+        </div>
+
+        <div class="panel" style="padding:18px;">
+          <h2>Drop Rules</h2>
+          <ul style="margin:12px 0 0; padding-left:16px; color:var(--muted); line-height:1.8;">
+            <li>Limitierte Stückzahl</li>
+            <li>Keine Restocks (optional)</li>
+            <li>Icon-only Pieces für Kenner</li>
+            <li>Stamp/Tag für Echtheit</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="footer" style="margin-top:34px;">
+        <div class="container" style="padding:0;">
+          © <span id="year"></span> CRDLUCK
+        </div>
+      </footer>
+
+      <div class="toast" id="toast"></div>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
