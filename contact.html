@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRDLUCK — Contact</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><div class="badge">🔱</div><div>CRDLUCK<small>Luxury is Rare</small></div></a>
+        <nav class="links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="shop.html">Shop</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="drop.html">Drop</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-gold" href="drop.html">Join Drop</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 style="font-size:40px; margin:0 0 10px;">Contact</h1>
+      <p>Business, Collabs, Support – schreib uns.</p>
+
+      <div class="grid-2">
+        <div class="panel" style="padding:18px;">
+          <h2>Nachricht</h2>
+          <form onsubmit="return handleContact(event)" style="margin-top:12px;">
+            <div class="row"><input name="name" required placeholder="Name" /></div>
+            <div class="row"><input name="email" type="email" required placeholder="E-Mail" /></div>
+            <div class="row"><textarea name="message" required placeholder="Deine Nachricht"></textarea></div>
+            <div class="row"><button class="btn btn-gold" type="submit">Senden</button></div>
+          </form>
+        </div>
+
+        <div class="panel" style="padding:18px;">
+          <h2>Direkt</h2>
+          <p>
+            E-Mail: <b style="color:var(--text);">hello@crdluck.com</b><br/>
+            Instagram: <b style="color:var(--text);">@crdluck</b><br/>
+            Collabs: <b style="color:var(--text);">partners@crdluck.com</b>
+          </p>
+          <div class="row" style="margin-top:14px;">
+            <a class="btn" href="shop.html">Shop</a>
+            <a class="btn" href="drop.html">Drop</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" style="margin-top:34px;">
+        <div class="container" style="padding:0;">
+          © <span id="year"></span> CRDLUCK
+        </div>
+      </footer>
+
+      <div class="toast" id="toast"></div>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
