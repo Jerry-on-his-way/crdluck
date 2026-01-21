@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRDLUCK — Shop</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><div class="badge">🔱</div><div>CRDLUCK<small>Luxury is Rare</small></div></a>
+        <nav class="links">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="shop.html">Shop</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="drop.html">Drop</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-gold" href="drop.html">Join Drop</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 style="font-size:40px; margin:0 0 10px;">Shop</h1>
+      <p>Streetwear Pieces – clean, elitär, drop-ready.</p>
+
+      <div class="row" style="margin-top:18px;">
+        <select>
+          <option>Sortierung: Featured</option>
+          <option>Preis: niedrig → hoch</option>
+          <option>Preis: hoch → niedrig</option>
+          <option>Neu</option>
+        </select>
+        <select>
+          <option>Category: All</option>
+          <option>Hoodies</option>
+          <option>T-Shirts</option>
+          <option>Caps</option>
+        </select>
+      </div>
+
+      <div class="products">
+        <div class="product">
+          <div class="img">HOODIE</div>
+          <h3 style="margin:12px 0 6px;">Elite Hoodie — Black/Gold</h3>
+          <p>Secondary Icon als Brust-Stick. Wordmark im Nacken.</p>
+          <div class="row" style="justify-content:space-between;">
+            <span class="price">129 €</span>
+            <button class="btn" onclick="toast('🛒 In den Warenkorb (Demo)')">Add</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="img">TEE</div>
+          <h3 style="margin:12px 0 6px;">Insignia Tee — Minimal</h3>
+          <p>Clean Wordmark. Heavy Cotton Feel.</p>
+          <div class="row" style="justify-content:space-between;">
+            <span class="price">59 €</span>
+            <button class="btn" onclick="toast('🛒 In den Warenkorb (Demo)')">Add</button>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="img">CAP</div>
+          <h3 style="margin:12px 0 6px;">Crown Cap — Icon Only</h3>
+          <p>Insider-Symbol. Sofort erkennbar.</p>
+          <div class="row" style="justify-content:space-between;">
+            <span class="price">39 €</span>
+            <button class="btn" onclick="toast('🛒 In den Warenkorb (Demo)')">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" style="padding:18px; margin-top:18px;">
+        <h2>Checkout (kostenloser Start)</h2>
+        <p>
+          Für den Start: Drop/Reserve List + manuelle Abwicklung (E-Mail/WhatsApp).  
+          Sobald du willst, können wir Stripe/Shopify als echten Checkout integrieren.
+        </p>
+        <div class="row" style="margin-top:12px;">
+          <a class="btn btn-gold" href="drop.html">Reserve List öffnen</a>
+          <a class="btn" href="contact.html">Kontakt</a>
+        </div>
+      </div>
+
+      <footer class="footer" style="margin-top:34px;">
+        <div class="container" style="padding:0;">
+          © <span id="year"></span> CRDLUCK
+        </div>
+      </footer>
+
+      <div class="toast" id="toast"></div>
+    </div>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
